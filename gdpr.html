@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stáhni WebinarJam</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <nav v-bind:class="{ 'open-menu': openMenu }">
+        <div class="container">
+          <router-link to="/" class="logo">
+            <img src="./assets/logo.svg" alt="Stahni WebinarJam Logo" />
+            <h1>
+              <p>{{ $t('title') }}</p>
+              <span v-if="$t('subtitle')"> {{ $t('subtitle') }} </span>
+            </h1>
+          </router-link>
+          <div class="menu-links">
+            <ul>
+              <li>
+                <router-link to="/"> {{ $t('links[0]') }} </router-link>
+              </li>
+              <li>
+                <router-link to="/gdpr"> {{ $t('links[1]') }}</router-link>
+              </li>
+              <li>
+                <router-link to="/terms"> {{ $t('links[2]') }} </router-link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/kaldaf/stahni-webinarjam"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <select v-model="$i18n.locale">
+                  <option
+                    v-for="(lang, i) in langs"
+                    :key="`Lang${i}`"
+                    :value="lang"
+                  >
+                    {{ lang }}
+                  </option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="operators">
+            <button @click="openMenu = !openMenu">
+              <img :src="!openMenu ? './assets/menu.svg':'./assets/close.svg' " alt="">
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="view-body container">
+        <router-view></router-view>
+      </div>
+      <footer>
+        <p class="container">
+          &copy; 2021 - {{new Date().getFullYear()}}
+          <a href="https://filipkalousek.cz" target="_blank">Filip Kalousek</a>
+        </p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/vue@2"></script>
+    <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/vue-i18n@8"></script>
+    <script src="text.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
