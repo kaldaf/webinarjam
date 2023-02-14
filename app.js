@@ -16,10 +16,10 @@ const i18n = new VueI18n({
             title: "STÁHNI WEBINARJAM",
             subtitle: "stáhni a přehrávej",
             links: ["Domů", "GDPR", "Podmínky", "Stáhnout rozšíření"],
-            notFound: "Stránka nebyla nalezena",
+            notFound: "Support me via Revolut bellow.",
             privacyPolicy: privacyEn,
             terms: termsEn,
-            homeBody: "Můžeš mě podpořit níže.",
+            homeBody: "Podpořte mě přes Revolut níže.",
         }
     }
 })
@@ -118,8 +118,8 @@ const Homepage = {
     template: `
         <div>
             <p>{{ $t('homeBody') }}</p>
-            <a href="https://www.paypal.com/paypalme/kaldaf" target="_blank">
-                <img style="width: 160px;" src="./assets/paypal.png">
+            <a href="https://revolut.me/kaldaf" target="_blank">
+                <img style="width: 160px;" src="./assets/donate.png">
             </a>
             <change-logs></change-logs>
         </div>
