@@ -71,6 +71,14 @@ Vue.component("change-logs", {
                             `,
                     version: "1.1.0"
                 },
+                {
+                    date: "2023-02-14",
+                    title: "Oprava chyb",
+                    description: `
+                            Focus aktuálního okna s přesnou url, zakázané tlačítko při jiné stránce.
+                            `,
+                    version: "1.1.0"
+                },
             ],
         }
     },
