@@ -63,6 +63,14 @@ Vue.component("change-logs", {
                             `,
                     version: "1.0.0"
                 },
+                {
+                    date: "2023-02-14",
+                    title: "Nový release je venku",
+                    description: `
+                            Z důvodu aktualizace "enginu" od Googlu pro rozšíření, jsme migrovali na novou verzi V3, všechny funkce byly zachovány, můžete přehrávat a stahovat!
+                            `,
+                    version: "1.1.0"
+                },
             ],
         }
     },
