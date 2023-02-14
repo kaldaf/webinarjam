@@ -77,7 +77,7 @@ Vue.component("change-logs", {
                     description: `
                             Focus aktuálního okna s přesnou url, zakázané tlačítko při jiné stránce.
                             `,
-                    version: "1.1.0"
+                    version: "1.1.1"
                 },
             ],
         }
